@@ -43,9 +43,8 @@ void loop() {
   if (MAC == NULL) {
     while (bluetooth.available() == 0) {
       //Guaranteed to exit once MAC is sent
-      //add a timer either here or on kotlin end?
     }
-    MAC = readMACAddress(); //Cool now NEVER free() this
+    MAC = readMACAddress();
   }
 
   //Start reading text down UART
